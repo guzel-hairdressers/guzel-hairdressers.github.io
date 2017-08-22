@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Парикмахерская Гузель</title>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="Парикмахерская Гузель на Восстания 108. Хорошая стрижка по хорошей цене">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="keywords" content="hairCut, hairDresser's">
+   <link rel="shortcut icon" href="https://image.freepik.com/free-icon/no-translate-detected_318-56774.jpg" type="image/x-icon">
+	<!-- jQuery -->
+	<script
+	src="https://code.jquery.com/jquery-3.1.1.min.js"
+	integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+	crossorigin="anonymous"></script>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+	<!-- Bootstrap v3.4 -->
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<!-- Styles -->
+	<link rel="stylesheet" href="css/main_styles.css">
+
+</head>
+<body>
+	<header>
+		<div id="upLine">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 col-sm-8 col-md-9 logo">
+						<h2 id="logo"><a href="#">Парикмахерская <span>Гузель</span></a></h2>
+					</div>
+					<button data-toggle="collapse" data-target="#only_on_small_displays_collapses"><i class="fa fa-align-right"></i></button>
+					<div class="col-xs-12 col-sm-4 col-md-3 phone_location" id="info">
+						<div id="only_on_small_displays_collapses" class="collapse">
+							<h3><a href="tel: +78432147133"><i class="fa fa-mobile"></i> 8 (843) 214-71-33</a></h3>
+							<p><a href="https://yandex.ru/maps/-/C6AGRI9e" target="blank"><i class="fa fa-map-marker"></i> Восстания, 105</a></p>
+						</div>
+						<script>
+							if($(window).width() > 767){
+								$('button').hide();
+								$('.collapse').show();
+							}
+						</script>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="content">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 col-sm-6 col-md-4 haircuts">
+						<div class="head">
+							<center>
+								<h3>Стрижки</h3>
+								<div class="round">
+									<i class="fa fa-cut" id="scissors"></i>
+								</div>
+							</center>
+						</div>
+						<div class="body">
+							<ul class="service left_ul">
+								<li>Стрижка мужская</li>
+								<li>Стрижка женская</li>
+								<li>Стрижка детская</li>
+								<li>Окрашивание волос</li>
+								<li>Коррекция бровей</li>
+								<li>Химическая завивка</li>
+							</ul>
+							<ul class="prices right_ul">
+								<li><span>от</span> 250 <i class="fa fa-ruble"></i></li>
+								<li><span>от</span> 300 <i class="fa fa-ruble"></i></li>
+								<li><span>от</span> 150 <i class="fa fa-ruble"></i></li>
+								<li><span>от</span> 350 <i class="fa fa-ruble"></i></li>
+								<li><span>от</span> 150 <i class="fa fa-ruble"></i></li>
+								<li><span>от</span> 600 <i class="fa fa-ruble"></i></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-5 col-md-3 schedule">
+						<div class="head">
+							<center>
+								<h3>График работы</h3>
+								<div class="round">
+									<i class="fa fa-clock-o" id="clock"></i>
+								</div>
+							</center>
+						</div>
+						<div class="body">
+							<ul class="left_ul">
+								<li>ПН-ПТ</li>
+								<li>СБ-ВС</li>
+							</ul>
+							<ul class="right_ul">
+								<li>9<sup>00</sup> - 20<sup>00</sup></li>
+								<li>9<sup>00</sup> - 18<sup>00</sup></li>
+							</ul>
+							<div class="isOpen">
+								<p id="open">Сейчас открыто</p>
+								<p id="close">Сейчас закрыто</p>
+							</div>
+							<script>
+								var date = new Date();
+								if(date.getDay() == 0 || date.getDay() == 6){
+									if(date.getHours() < 9 || date.getHours() >= 18)
+										$('#open').hide();
+									else $('#close').hide();
+								}
+								else{
+									if(date.getHours() < 9 || date.getHours() >= 20)
+										$('#open').hide();
+									else $('#close').hide();
+								}
+							</script>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header><!-- /header -->
+
+	<section id="location">
+		<div class="container">
+			<div class="row">
+				<div class="section_header text-center">
+					<h2>Наше местоположение</h2>
+					<h4>г.Казань, Московский район, улица Восстания, дом 105</h4>
+				</div>
+			</div>
+			<div class="row tab">
+				<div id="tablet">
+					<div id="tabscreen">
+						<iframe src="https://api-maps.yandex.ru/frame/v1/-/C6AGRI9e" frameborder=""></iframe>
+					</div>
+					<a href="https://api-maps.yandex.ru/frame/v1/-/C6AGRI9e" target="blank"><div id="tab_button"><div id="tab_square"></div></div></a>
+				</div>
+			</div>
+		</div>
+	</section><!-- /location-->
+
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3"><h4>&copy2017</h4></div>
+				<div class="col-md-3"><h4>О нас</h4></div>
+				<div class="col-md-3"><h4>Заказать сайт</h4></div>
+				<div class="col-md-3">
+					<h4>Мы в соцсетях</h4>
+					<div class="socials">
+						<a href="https://vk.com" target="blank"><i class="fa fa-vk"></i></a>
+						<a href="https://facebool.com" target="blank"><i class="fa fa-facebook"></i></a>
+						<a href="https://twitter.com" target="blank"><i class="fa fa-twitter"></i></a>
+					</div>	
+					</div>
+			</div>
+			<p style="font-size: 0.8em; font-weight: normal; color: #fff; line-height: 100%"><span style="color: #fff">*</span>Карта может прогружаться долго при медленной скорости подключения к интернету</p>
+		</div>
+	</footer>
+</body>
+</html>
+<script>
+		var h = $('.row').width();//0.6
+		if ($(window).width() >= 768)
+			h*=0.6;
+		else{
+			w = h*0.75;
+			h*=1.4;
+			$('#tablet').css({'width': w, 'border-radius': '20px', 'border': '3px solid #989898'});
+			$('#tabscreen').css({'margin': '14% 0 0 5%', 'width': '90%', 'height': '80%'});
+			$('#tab_button').css({'top': '92%', 'right': '50%', 'margin-right': '-7.5%', 'width': '15%'});
+
+		}
+		$('#tablet').css('height', h);
+		$('button').css({'top': $('#upLine').height()*0.5});
+</script>
